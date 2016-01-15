@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2c5f69e7-c458-48b0-874a-9e1364342ed3" name="UMLClassDiagram1" linkedPackageId="c3b0ff79-5296-4229-a66c-a3544bbca938" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2c5f69e7-c458-48b0-874a-9e1364342ed3" name="UMLClassDiagram1" linkedPackageId="c3b0ff79-5296-4229-a66c-a3544bbca938" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <profileInstances>
     <packageHasProfileInstances Id="6aeeee87-d209-4d5e-a3c8-d03b36d8a005">
       <profileInstance Id="1577f749-6797-4b83-af0a-d065e6600ead" name="StandardProfileL2">
@@ -18,6 +18,30 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="54174326-4c7a-4257-9533-bb91bc5728df" name="Coffee" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="844956e2-b5fe-4961-8150-40d6d852a2fe" />
+        <suppliersInternal>
+          <interfaceRealization Id="73f31a17-588b-47cf-9186-8519ba46c4b8">
+            <interfaceMoniker Id="a6f68a1d-07de-43d2-addc-8bf707d32359" LastKnownName="IDrinkable" />
+            <elementDefinition Id="6f9e44a8-90c6-45e7-b55e-eff00a11ce47" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="3ede627e-ea9a-41e3-82e9-32d9c7b05506" isDerived="false" sourceEndRoleName="Coffee" targetEndRoleName="Country" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2775cd06-2d6f-4a08-b3f3-287a624248ff" LastKnownName="Country" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac2c5178-03eb-40b0-87e8-ca2f3232872e" name="Coffee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6389de8c-f8f2-499e-9f15-4ae1bad1bc71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d78260b2-93f3-4c88-ae09-390758f9d0af" name="Country" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="e544b5fe-10c2-4b38-bb04-16262b2705ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="481d8060-8052-4e68-bceb-780ef8344499" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="47b7beff-cffe-4b3f-a9b2-51b7a1ad6c82" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="7e52a4cd-d4e4-4b38-a385-a37ae4e53fbf" />
@@ -49,11 +73,23 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="e6533d9b-dcf2-4f91-a648-30c1fa9e7e6b" name="HotWater" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="0894b871-7a91-4410-a8f9-2590310434cf" />
+        <suppliersInternal>
+          <interfaceRealization Id="68c72d1c-43de-41ba-8819-833444b5d2d2">
+            <interfaceMoniker Id="a6f68a1d-07de-43d2-addc-8bf707d32359" LastKnownName="IDrinkable" />
+            <elementDefinition Id="fca8b11a-2126-4d20-98ef-abd1d0c2eaae" />
+          </interfaceRealization>
+        </suppliersInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="5c7c08f3-ff36-4555-af75-92cdfd010cab" name="CoffeeDispenser" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="31d95f0a-db53-4f40-8547-c5b1411ec913" />
+        <suppliersInternal>
+          <interfaceRealization Id="7497e37b-cd0d-4bef-b567-bd0d190a0f09">
+            <interfaceMoniker Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" LastKnownName="IDispenser" />
+            <elementDefinition Id="87a9ece2-29d6-4fd4-a07e-5b3d8f3f1070" />
+          </interfaceRealization>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation Id="48108963-eee5-4a96-9cf8-9679096bcfd7" name="Dispense" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="f855626b-7f4f-4dd6-9e71-44d8d77af955" />
@@ -74,6 +110,12 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="daaa4daa-5e47-42f2-bb18-12f8c3986f4f" name="HotwaterDispenser" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e4beaf6f-726b-4632-a749-e462e7aa69e1" />
+        <suppliersInternal>
+          <interfaceRealization Id="6be18132-f2ef-4f62-b9c6-31a65c5d1737">
+            <interfaceMoniker Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" LastKnownName="IDispenser" />
+            <elementDefinition Id="75c94ac1-2848-4c4f-8370-add84df33785" />
+          </interfaceRealization>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation Id="dd68d5c8-8047-47af-becd-6b6d8ece33e5" name="Dispense" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b8c42305-2cd0-4cfa-937e-c4202d32da19" />
@@ -119,11 +161,32 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="2f359988-489b-4034-9b97-e117b12d9801" name="CoffeeMachineFacade" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="11145be3-86f7-4930-b075-ee57500c402a" />
+        <suppliersInternal>
+          <dependency Id="1dedda7c-6f50-49dc-aca2-6631ced2589e">
+            <interfaceMoniker Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" LastKnownName="IDispenser" />
+            <elementDefinition Id="f37e35ca-961c-481c-aa15-34d76eb8afbe" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="105d2c9a-b64d-455e-a2f7-ba6164a686ba" name="IDispenser dispenser" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="94ddce85-eecc-4277-bdc0-8fbe85091f20" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="01eed78a-0ad6-4256-8644-e287154e4255" name="DispenserFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="daabbdf3-b7f6-4cbc-a1ce-cc5a16dfabe1" />
+        <suppliersInternal>
+          <dependency Id="4ffdbf0d-277a-4ca9-ae2f-1457d6ba187b">
+            <enumerationMoniker Id="54861b1d-4bcd-427e-843e-f9f168a31f99" LastKnownName="DrinkEnum" />
+            <elementDefinition Id="ff69b4c9-bef0-4804-b388-f10468cbfbf5" />
+          </dependency>
+          <interfaceRealization Id="44c4aa4c-2c23-459d-9069-10641849cd06">
+            <interfaceMoniker Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" LastKnownName="IDispenser" />
+            <elementDefinition Id="fc9ad6b6-fa65-4cb9-9a20-821712630b12" />
+          </interfaceRealization>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation Id="27a1e820-3fed-41e0-b502-0e1c6a6ff6a5" name="CreateDispenser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="a9dfb6b8-1807-49d5-9798-ab8b975d8973" />
@@ -138,6 +201,19 @@
                   <elementDefinition Id="143e2e39-69c3-4808-861e-f47a999e976f" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="f85aaebc-4622-48e1-a8df-093991cce8f8" LastKnownName="IDispenser" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="10d429bf-65d6-48b4-938f-490eedf78a7e" name="Dispense" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d4e7e64-a587-4ef2-98f2-bef7fd84c323" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="69fb3697-b6d4-4fa7-9566-eb4cafb01a94" direction="Return" isUnique="false">
+                  <elementDefinition Id="30257998-ea16-4f93-a2c0-77ca6ef2e972" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="885ffbd0-f7b9-416b-a01b-27b2adcb0bc0" LastKnownName="IDrinkable" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -183,6 +259,31 @@
           </enumerationLiteral>
         </ownedLiterals>
       </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" name="IDispenser" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf" />
+        <ownedOperations>
+          <operation Id="93dbb8fb-21a7-421c-bbb1-a235d2907fa1" name="Dispense" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="01a7fde5-2400-48e0-993a-b360bbf268f1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cff8adb9-18f5-4ed8-801c-bded979a78f7" direction="Return" isUnique="false">
+                  <elementDefinition Id="c629b68a-946f-4781-ae37-71de0bc0f98a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="885ffbd0-f7b9-416b-a01b-27b2adcb0bc0" LastKnownName="IDrinkable" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a6f68a1d-07de-43d2-addc-8bf707d32359" name="IDrinkable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477" />
+      </Interface>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="c3b0ff79-5296-4229-a66c-a3544bbca938" name="CoffeeMachine">

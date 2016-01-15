@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9f5ca264-e0c6-49f1-80a8-6cab088f6923" name="UMLUseCaseDiagram1" linkedPackageId="ffa34e2f-2478-4323-abac-0023bb4faf6e" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="186279fb-4884-4e39-8116-b3ce16d34736">
+      <profileInstance Id="6544eb04-3303-488b-9d67-03b046385189" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2d1e7711-025a-4935-9405-1fe39ae14f93">
+      <profileInstance Id="06b89370-c7af-4f3a-995c-217efe2ebe68" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b2abbcc2-164f-4003-aac7-e75b5320f889" name="CoffeeMachine" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="72aef530-aa59-4610-8bd9-a6278f86c2a5">
+            <elementDefinition Id="257d4471-2c60-4a3b-b5e8-0b01fa2be3ab" />
+            <body>if coffe is out of stock</body>
+            <annotatedElements>
+              <useCaseMoniker Id="0399fec6-c27d-45f8-981f-903a8b7d5885" LastKnownName="call technician" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="3e30a8e6-91f3-4dd2-b7d0-453c8448950d" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="da08402e-7a05-43d4-be1c-b3add62626cb" name="Consumer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7db24f04-61e9-4041-92b6-d1b92f7dc9f7" />
+        <targetEnds>
+          <association Id="a66238f6-3f86-4d43-940a-adbc63147e86" isDerived="false" sourceEndRoleName="Consumer" targetEndRoleName="get coffee" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0644b1ae-41fc-4bad-84be-966afe1e81bf" LastKnownName="get coffee" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56a76289-4d0e-4f56-a17f-c8a5fb8a92b0" name="Consumer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00ab7e7c-0cfb-42b8-8fea-5993ddcc2415" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="457dae25-e4f3-4320-8b8b-8483e0982321" name="get coffee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d95a9c1b-59cf-46b4-a8f3-cc098d9acd93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="62ddb301-5de0-4ddc-9100-047b19d4b2af" />
+          </association>
+          <association Id="d60da1e6-a151-4dde-bf70-e420d0c2c26a" isDerived="false" sourceEndRoleName="Consumer" targetEndRoleName="get hot water" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cc790b95-34f2-4b78-9174-a9f2b846599e" LastKnownName="get hot water" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe8fcaab-edcf-482d-bc55-835fc7be61c8" name="Consumer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="69777921-f0ae-4ff1-9284-5c6da65837ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59b7d08f-083e-4aef-abc1-cf2da116a9c9" name="get hot water" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="76e2ce80-469d-4dac-9830-7f888666b1d2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="098a84c3-b630-4acb-bb33-f993c6b20cad" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="54611990-5450-4247-8312-faaec83d6916" name="Technician" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2dca3cc4-b4fb-46e0-9e14-598abbd69747" />
+        <targetEnds>
+          <association Id="2b91686d-0fbc-4714-b651-919cee33ceaf" isDerived="false" sourceEndRoleName="Technician" targetEndRoleName="call technician" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0399fec6-c27d-45f8-981f-903a8b7d5885" LastKnownName="call technician" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0962e8d8-1edb-4040-9289-e5dc96015c07" name="Technician" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f512c434-137e-48f9-bbb4-283bc41fb064" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="988e62ea-2fec-4590-a4af-e6f549c68f2c" name="call technician" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5899e1ce-6d94-4950-af3b-5fcbbdd9732a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="183c8a69-a3e2-478e-b46f-7bc926bb8e5c" />
+          </association>
+          <association Id="99c6ad3c-cc98-4c14-9abb-cfe9372ef319" isDerived="false" sourceEndRoleName="Technician" targetEndRoleName="refill stock" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9a9858a8-1232-42f5-9efc-a27cb170d3fa" LastKnownName="refill stock" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fd2f310-60b0-48db-9056-0eca05d14c2c" name="Technician" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3382c2ab-4368-4eb6-b6e4-45aa1e962f6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f0ec2e94-7d81-494d-b2ab-654d60affdb3" name="refill stock" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9fc5919c-9933-4709-8c79-5e0aed1d12fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f036c893-cdd6-41d1-af75-cbaf6ad7942b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0644b1ae-41fc-4bad-84be-966afe1e81bf" name="get coffee" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d96bb6e6-44e1-447b-b6b9-bf80477ffbb8" />
+        <additions>
+          <include Id="c8237c09-be8a-4660-9e4c-5f4f8dceb93f">
+            <useCaseMoniker Id="0399fec6-c27d-45f8-981f-903a8b7d5885" LastKnownName="call technician" />
+            <elementDefinition Id="4b30227b-da34-48c5-90d3-df92febff69f" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b2abbcc2-164f-4003-aac7-e75b5320f889" LastKnownName="CoffeeMachine" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cc790b95-34f2-4b78-9174-a9f2b846599e" name="get hot water" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f9654cb-4869-4c8d-9291-c4c5009e88f5" />
+        <subjects>
+          <subsystemMoniker Id="b2abbcc2-164f-4003-aac7-e75b5320f889" LastKnownName="CoffeeMachine" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9a9858a8-1232-42f5-9efc-a27cb170d3fa" name="refill stock" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc091ece-6d20-4640-b78a-b1dcaf567668" />
+        <subjects>
+          <subsystemMoniker Id="b2abbcc2-164f-4003-aac7-e75b5320f889" LastKnownName="CoffeeMachine" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="0399fec6-c27d-45f8-981f-903a8b7d5885" name="call technician" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d28c6352-4384-43d7-8ce2-a9e4074f0ceb" />
+        <subjects>
+          <subsystemMoniker Id="b2abbcc2-164f-4003-aac7-e75b5320f889" LastKnownName="CoffeeMachine" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="ffa34e2f-2478-4323-abac-0023bb4faf6e" name="CoffeeMachine">
+    <elementDefinition Id="f3a56b6b-6745-49bd-bdb3-d1b20b278884" />
+  </package>
+</useCaseModelRoot>

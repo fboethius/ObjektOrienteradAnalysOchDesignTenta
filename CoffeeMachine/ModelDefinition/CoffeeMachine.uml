@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="f3a56b6b-6745-49bd-bdb3-d1b20b278884"
   name="CoffeeMachine" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -25,6 +25,56 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6f9e44a8-90c6-45e7-b55e-eff00a11ce47">
+            <interfaceMoniker
+              Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477"
+              LastKnownName="IDrinkable"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="481d8060-8052-4e68-bceb-780ef8344499"
+            isDerived="false"
+            sourceEndRoleName="Coffee"
+            targetEndRoleName="Country"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3415922d-0784-4ba2-b930-6a2e22206657"
+              LastKnownName="Country"
+              LastKnownLocation="CoffeeMachine.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6389de8c-f8f2-499e-9f15-4ae1bad1bc71"
+                  name="Coffee"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e544b5fe-10c2-4b38-bb04-16262b2705ce"
+                  name="Country"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="7e52a4cd-d4e4-4b38-a385-a37ae4e53fbf"
@@ -107,7 +157,17 @@
         name="HotWater"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="fca8b11a-2126-4d20-98ef-abd1d0c2eaae">
+            <interfaceMoniker
+              Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477"
+              LastKnownName="IDrinkable"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -116,6 +176,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="87a9ece2-29d6-4fd4-a07e-5b3d8f3f1070">
+            <interfaceMoniker
+              Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
+              LastKnownName="IDispenser"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="f855626b-7f4f-4dd6-9e71-44d8d77af955"
@@ -151,6 +220,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="75c94ac1-2848-4c4f-8370-add84df33785">
+            <interfaceMoniker
+              Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
+              LastKnownName="IDispenser"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="b8c42305-2cd0-4cfa-937e-c4202d32da19"
@@ -250,7 +328,30 @@
         name="CoffeeMachineFacade"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="f37e35ca-961c-481c-aa15-34d76eb8afbe">
+            <interfaceMoniker
+              Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
+              LastKnownName="IDispenser"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="94ddce85-eecc-4277-bdc0-8fbe85091f20"
+            name="IDispenser dispenser"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -259,6 +360,22 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="fc9ad6b6-fa65-4cb9-9a20-821712630b12">
+            <interfaceMoniker
+              Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
+              LastKnownName="IDispenser"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="ff69b4c9-bef0-4804-b388-f10468cbfbf5">
+            <enumerationMoniker
+              Id="5f9714b3-3b72-4cea-9e0b-49c7c570f71d"
+              LastKnownName="DrinkEnum"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="a9dfb6b8-1807-49d5-9798-ab8b975d8973"
@@ -285,6 +402,30 @@
                     <undefinedTypeMoniker
                       Id="31c73704-9ac7-4406-ab21-c873039ebc15"
                       LastKnownName="IDispenser"
+                      LastKnownLocation="CoffeeMachine.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7d4e7e64-a587-4ef2-98f2-bef7fd84c323"
+            name="Dispense"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30257998-ea16-4f93-a2c0-77ca6ef2e972"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3d6317ec-43f0-4816-9d74-5c545769abb5"
+                      LastKnownName="IDrinkable"
                       LastKnownLocation="CoffeeMachine.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -329,6 +470,309 @@
             name="Hotwater" />
         </ownedLiterals>
       </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
+        name="IDispenser"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="01a7fde5-2400-48e0-993a-b360bbf268f1"
+            name="Dispense"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c629b68a-946f-4781-ae37-71de0bc0f98a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3d6317ec-43f0-4816-9d74-5c545769abb5"
+                      LastKnownName="IDrinkable"
+                      LastKnownLocation="CoffeeMachine.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477"
+        name="IDrinkable"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="3e30a8e6-91f3-4dd2-b7d0-453c8448950d"
+        name="CoffeeMachine"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="257d4471-2c60-4a3b-b5e8-0b01fa2be3ab">
+            <body>if coffe is out of stock</body>
+            <annotatedElements>
+              <useCaseMoniker
+                Id="d28c6352-4384-43d7-8ce2-a9e4074f0ceb"
+                LastKnownName="call technician"
+                LastKnownLocation="CoffeeMachine.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7db24f04-61e9-4041-92b6-d1b92f7dc9f7"
+        name="Consumer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="62ddb301-5de0-4ddc-9100-047b19d4b2af"
+            isDerived="false"
+            sourceEndRoleName="Consumer"
+            targetEndRoleName="get coffee"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d96bb6e6-44e1-447b-b6b9-bf80477ffbb8"
+              LastKnownName="get coffee"
+              LastKnownLocation="CoffeeMachine.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00ab7e7c-0cfb-42b8-8fea-5993ddcc2415"
+                  name="Consumer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d95a9c1b-59cf-46b4-a8f3-cc098d9acd93"
+                  name="get coffee"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="098a84c3-b630-4acb-bb33-f993c6b20cad"
+            isDerived="false"
+            sourceEndRoleName="Consumer"
+            targetEndRoleName="get hot water"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7f9654cb-4869-4c8d-9291-c4c5009e88f5"
+              LastKnownName="get hot water"
+              LastKnownLocation="CoffeeMachine.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="69777921-f0ae-4ff1-9284-5c6da65837ac"
+                  name="Consumer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76e2ce80-469d-4dac-9830-7f888666b1d2"
+                  name="get hot water"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2dca3cc4-b4fb-46e0-9e14-598abbd69747"
+        name="Technician"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="183c8a69-a3e2-478e-b46f-7bc926bb8e5c"
+            isDerived="false"
+            sourceEndRoleName="Technician"
+            targetEndRoleName="call technician"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d28c6352-4384-43d7-8ce2-a9e4074f0ceb"
+              LastKnownName="call technician"
+              LastKnownLocation="CoffeeMachine.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f512c434-137e-48f9-bbb4-283bc41fb064"
+                  name="Technician"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5899e1ce-6d94-4950-af3b-5fcbbdd9732a"
+                  name="call technician"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f036c893-cdd6-41d1-af75-cbaf6ad7942b"
+            isDerived="false"
+            sourceEndRoleName="Technician"
+            targetEndRoleName="refill stock"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fc091ece-6d20-4640-b78a-b1dcaf567668"
+              LastKnownName="refill stock"
+              LastKnownLocation="CoffeeMachine.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3382c2ab-4368-4eb6-b6e4-45aa1e962f6a"
+                  name="Technician"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9fc5919c-9933-4709-8c79-5e0aed1d12fb"
+                  name="refill stock"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d96bb6e6-44e1-447b-b6b9-bf80477ffbb8"
+        name="get coffee"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4b30227b-da34-48c5-90d3-df92febff69f">
+            <useCaseMoniker
+              Id="d28c6352-4384-43d7-8ce2-a9e4074f0ceb"
+              LastKnownName="call technician"
+              LastKnownLocation="CoffeeMachine.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="3e30a8e6-91f3-4dd2-b7d0-453c8448950d"
+            LastKnownName="CoffeeMachine"
+            LastKnownLocation="CoffeeMachine.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7f9654cb-4869-4c8d-9291-c4c5009e88f5"
+        name="get hot water"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="3e30a8e6-91f3-4dd2-b7d0-453c8448950d"
+            LastKnownName="CoffeeMachine"
+            LastKnownLocation="CoffeeMachine.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fc091ece-6d20-4640-b78a-b1dcaf567668"
+        name="refill stock"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="3e30a8e6-91f3-4dd2-b7d0-453c8448950d"
+            LastKnownName="CoffeeMachine"
+            LastKnownLocation="CoffeeMachine.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d28c6352-4384-43d7-8ce2-a9e4074f0ceb"
+        name="call technician"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="3e30a8e6-91f3-4dd2-b7d0-453c8448950d"
+            LastKnownName="CoffeeMachine"
+            LastKnownLocation="CoffeeMachine.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
