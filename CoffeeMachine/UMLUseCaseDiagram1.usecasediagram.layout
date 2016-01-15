@@ -6,18 +6,18 @@
       <actorMoniker Id="da08402e-7a05-43d4-be1c-b3add62626cb" LastKnownName="Consumer" />
       <relativeChildShapes />
     </actorShape>
-    <actorShape Id="d863b9f7-5e09-45b3-a09b-782fa86fca0d" absoluteBounds="9.75, 3.75, 0.5, 0.5" isReference="false" heightOffset="0">
+    <actorShape Id="d863b9f7-5e09-45b3-a09b-782fa86fca0d" absoluteBounds="9.125, 3.75, 0.5, 0.5" isReference="false" heightOffset="0">
       <actorMoniker Id="54611990-5450-4247-8312-faaec83d6916" LastKnownName="Technician" />
       <relativeChildShapes />
     </actorShape>
-    <SubsystemShape Id="6c436929-ea2e-4d71-aa7b-df0a1bd03df9" absoluteBounds="3.375, 2.125, 5.375, 4.75" customColor="White">
+    <SubsystemShape Id="6c436929-ea2e-4d71-aa7b-df0a1bd03df9" absoluteBounds="3.375, 2.125, 4.125, 4.875" customColor="White">
       <subsystemMoniker Id="b2abbcc2-164f-4003-aac7-e75b5320f889" LastKnownName="CoffeeMachine" />
       <nestedChildShapes>
-        <useCaseShape Id="4461c702-015b-45d0-81aa-67ea7f478ab1" absoluteBounds="7.125, 4.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="4461c702-015b-45d0-81aa-67ea7f478ab1" absoluteBounds="6, 4.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
           <useCaseMoniker Id="9a9858a8-1232-42f5-9efc-a27cb170d3fa" LastKnownName="refill stock" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="936eff78-21e9-43b3-8464-d96ee988621e" absoluteBounds="3.75, 6.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="936eff78-21e9-43b3-8464-d96ee988621e" absoluteBounds="3.75, 4.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
           <useCaseMoniker Id="cc790b95-34f2-4b78-9174-a9f2b846599e" LastKnownName="get hot water" />
           <relativeChildShapes />
         </useCaseShape>
@@ -43,7 +43,7 @@
         <useCaseShapeMoniker Id="19ae6bc8-7585-4c9f-bbb4-4647012c961a" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(1.625 : 3.75); (4.02639320225002 : 6.15139320225002)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(1.625 : 3.64130434782609); (3.91871305889849 : 4.93775085937741)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="d60da1e6-a151-4dde-bf70-e420d0c2c26a" />
       <relativeChildShapes />
       <nodes>
@@ -66,7 +66,7 @@
         <useCaseShapeMoniker Id="3a8c3fe0-f053-4b1c-b856-4eb616699970" />
       </nodes>
     </commentConnector>
-    <useCaseAssociationConnector edgePoints="[(9.75 : 3.95833333333333); (6.82692307692308 : 3.47115384615385)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(9.125 : 3.95); (6.80901699437495 : 3.48680339887499)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="2b91686d-0fbc-4714-b651-919cee33ceaf" />
       <relativeChildShapes />
       <nodes>
@@ -74,7 +74,7 @@
         <useCaseShapeMoniker Id="3a8c3fe0-f053-4b1c-b856-4eb616699970" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(9.75 : 4.10526315789474); (8.00745559905853 : 4.83896606355431)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(9.125 : 4.09782608695652); (6.89375250050379 : 4.97092293458547)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="99c6ad3c-cc98-4c14-9abb-cfe9372ef319" />
       <relativeChildShapes />
       <nodes>

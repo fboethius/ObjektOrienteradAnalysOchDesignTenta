@@ -1,5 +1,4 @@
-﻿using System;
-using Tenta_20160115.Interface;
+﻿using Tenta_20160115.Interface;
 
 namespace Tenta_20160115.Models
     {
