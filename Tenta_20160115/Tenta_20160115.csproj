@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoffeeMachineFacade.cs" />
+    <Compile Include="DispenserFactory.cs" />
+    <Compile Include="Interface\IDispenser.cs" />
+    <Compile Include="Interface\IDrinkable.cs" />
+    <Compile Include="Models\Coffee.cs" />
+    <Compile Include="Models\CoffeeDispenser.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\HotWater.cs" />
+    <Compile Include="Models\HotwaterDispenser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenta_20160115", "Tenta_201
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenta_20160115.Test", "Tenta_20160115.Test\Tenta_20160115.Test.csproj", "{4FB21360-B51A-40A5-8513-F496FC3F434C}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CoffeeMachine", "CoffeeMachine\CoffeeMachine.modelproj", "{346537BE-4A26-491C-9AED-F0DE36F3ED67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4FB21360-B51A-40A5-8513-F496FC3F434C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB21360-B51A-40A5-8513-F496FC3F434C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB21360-B51A-40A5-8513-F496FC3F434C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346537BE-4A26-491C-9AED-F0DE36F3ED67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346537BE-4A26-491C-9AED-F0DE36F3ED67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346537BE-4A26-491C-9AED-F0DE36F3ED67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346537BE-4A26-491C-9AED-F0DE36F3ED67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
