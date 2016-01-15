@@ -331,17 +331,18 @@
         isActiveClass="false">
         <suppliersInternal>
           <dependency
-            Id="f37e35ca-961c-481c-aa15-34d76eb8afbe">
-            <interfaceMoniker
-              Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
-              LastKnownName="IDispenser"
+            Id="7ad3c7ab-6a50-4dd6-8207-8205ec918aed">
+            <classMoniker
+              Id="daabbdf3-b7f6-4cbc-a1ce-cc5a16dfabe1"
+              LastKnownName="DispenserFactory"
               LastKnownLocation="CoffeeMachine.uml" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="94ddce85-eecc-4277-bdc0-8fbe85091f20"
-            name="IDispenser dispenser"
+            name="dispenser"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -349,8 +350,41 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
+                LastKnownName="IDispenser"
+                LastKnownLocation="CoffeeMachine.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a0e167ec-d22d-437c-a2d9-6d467707a42d"
+            name="GetDrink"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da476ec7-2c6c-4f3f-a348-42717232e410"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477"
+                      LastKnownName="IDrinkable"
+                      LastKnownLocation="CoffeeMachine.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -361,13 +395,6 @@
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
-          <interfaceRealization
-            Id="fc9ad6b6-fa65-4cb9-9a20-821712630b12">
-            <interfaceMoniker
-              Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf"
-              LastKnownName="IDispenser"
-              LastKnownLocation="CoffeeMachine.uml" />
-          </interfaceRealization>
           <dependency
             Id="ff69b4c9-bef0-4804-b388-f10468cbfbf5">
             <enumerationMoniker
@@ -402,30 +429,6 @@
                     <undefinedTypeMoniker
                       Id="31c73704-9ac7-4406-ab21-c873039ebc15"
                       LastKnownName="IDispenser"
-                      LastKnownLocation="CoffeeMachine.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="7d4e7e64-a587-4ef2-98f2-bef7fd84c323"
-            name="Dispense"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="30257998-ea16-4f93-a2c0-77ca6ef2e972"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="3d6317ec-43f0-4816-9d74-5c545769abb5"
-                      LastKnownName="IDrinkable"
                       LastKnownLocation="CoffeeMachine.uml" />
                   </type_NamedElement>
                 </parameter>

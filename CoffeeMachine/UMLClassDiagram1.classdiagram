@@ -162,16 +162,34 @@
       <class Id="2f359988-489b-4034-9b97-e117b12d9801" name="CoffeeMachineFacade" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="11145be3-86f7-4930-b075-ee57500c402a" />
         <suppliersInternal>
-          <dependency Id="1dedda7c-6f50-49dc-aca2-6631ced2589e">
-            <interfaceMoniker Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" LastKnownName="IDispenser" />
-            <elementDefinition Id="f37e35ca-961c-481c-aa15-34d76eb8afbe" />
+          <dependency Id="a3ee2b51-8317-4f88-9394-baaf504a10ef">
+            <classMoniker Id="01eed78a-0ad6-4256-8644-e287154e4255" LastKnownName="DispenserFactory" />
+            <elementDefinition Id="7ad3c7ab-6a50-4dd6-8207-8205ec918aed" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
-          <property Id="105d2c9a-b64d-455e-a2f7-ba6164a686ba" name="IDispenser dispenser" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="105d2c9a-b64d-455e-a2f7-ba6164a686ba" name="dispenser" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="94ddce85-eecc-4277-bdc0-8fbe85091f20" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="544707ce-3569-42eb-9c5a-bb9f5289eecc" LastKnownName="IDispenser" />
+            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b2740521-f445-420a-978c-56581bb8490b" name="GetDrink" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a0e167ec-d22d-437c-a2d9-6d467707a42d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3079e726-892d-40e2-b5e1-1df9b8261080" direction="Return" isUnique="false">
+                  <elementDefinition Id="da476ec7-2c6c-4f3f-a348-42717232e410" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f5722753-c28b-4d7c-8736-015b97be248b" LastKnownName="IDrinkable" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -182,10 +200,6 @@
             <enumerationMoniker Id="54861b1d-4bcd-427e-843e-f9f168a31f99" LastKnownName="DrinkEnum" />
             <elementDefinition Id="ff69b4c9-bef0-4804-b388-f10468cbfbf5" />
           </dependency>
-          <interfaceRealization Id="44c4aa4c-2c23-459d-9069-10641849cd06">
-            <interfaceMoniker Id="9bb1c798-d043-4e5f-9736-d3145a9c8669" LastKnownName="IDispenser" />
-            <elementDefinition Id="fc9ad6b6-fa65-4cb9-9a20-821712630b12" />
-          </interfaceRealization>
         </suppliersInternal>
         <ownedOperationsInternal>
           <operation Id="27a1e820-3fed-41e0-b502-0e1c6a6ff6a5" name="CreateDispenser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -201,19 +215,6 @@
                   <elementDefinition Id="143e2e39-69c3-4808-861e-f47a999e976f" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="f85aaebc-4622-48e1-a8df-093991cce8f8" LastKnownName="IDispenser" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="10d429bf-65d6-48b4-938f-490eedf78a7e" name="Dispense" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="7d4e7e64-a587-4ef2-98f2-bef7fd84c323" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="69fb3697-b6d4-4fa7-9566-eb4cafb01a94" direction="Return" isUnique="false">
-                  <elementDefinition Id="30257998-ea16-4f93-a2c0-77ca6ef2e972" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="885ffbd0-f7b9-416b-a01b-27b2adcb0bc0" LastKnownName="IDrinkable" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -285,6 +286,16 @@
         <elementDefinition Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477" />
       </Interface>
     </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f5722753-c28b-4d7c-8736-015b97be248b" name="IDrinkable" isAbstract="false" isLeaf="false" cachedFullName="CoffeeMachine::IDrinkable">
+        <elementDefinition Id="165f6c78-14cd-47d2-aeef-0ed2a79fd477" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="544707ce-3569-42eb-9c5a-bb9f5289eecc" name="IDispenser" isAbstract="false" isLeaf="false" cachedFullName="CoffeeMachine::IDispenser">
+        <elementDefinition Id="8550a4c3-cc1b-485e-bf82-e5a1f02ecbaf" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="c3b0ff79-5296-4229-a66c-a3544bbca938" name="CoffeeMachine">
     <elementDefinition Id="f3a56b6b-6745-49bd-bdb3-d1b20b278884" />

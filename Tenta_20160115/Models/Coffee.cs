@@ -7,8 +7,8 @@ namespace Tenta_20160115.Models
         public Coffee(string name, string country, double pricePerUnit, string website)
             {
             CountryOfOrigin = new Country();
-            Name=name;
-            CountryOfOrigin.Name=country;
+            Name = name;
+            CountryOfOrigin.Name = country;
             PricePerUnit = pricePerUnit;
             Website = website;
             }
