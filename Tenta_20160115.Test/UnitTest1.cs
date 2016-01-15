@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tenta_20160115.Models;
+using Tenta_20160115.ClassLibrary;
+using Tenta_20160115.ClassLibrary.Models;
 
 namespace Tenta_20160115.Test
     {
